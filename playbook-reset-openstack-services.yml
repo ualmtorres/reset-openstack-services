@@ -61,8 +61,8 @@
   tasks:
   - name: Restart openvswitch-switch service
     service: name=openvswitch-switch state=restarted
-  - name: restart ovs-cleanup
-    service: name=neutron-ovs-cleanup state=restarted
+#  - name: restart ovs-cleanup
+#    service: name=neutron-ovs-cleanup state=restarted
   - name: restart neutron-openvswitch-agent
     service: name=neutron-openvswitch-agent state=restarted
   - name: restart neutron-dhcp-agent
@@ -76,8 +76,8 @@
 - hosts: compute
   become: true
   tasks:
-  - name: restart ovs-cleanup     
-    service: name=neutron-ovs-cleanup state=restarted
+#  - name: restart ovs-cleanup     
+#    service: name=neutron-ovs-cleanup state=restarted
   - name: restart neutron-openvswitch-agent
     service: name=neutron-openvswitch-agent state=restarted
   
